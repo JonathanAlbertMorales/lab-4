@@ -40,3 +40,37 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+## User Instructions
+
+ML-API that runs in k8s pod use to make predictions on Dataframe
+
+### Running Repo
+
+1. set up Make file by having python3+ installed as well as setting up activated env.
+2. run file `run_docker.sh` this will run the python project in docker
+3. open second window and run `make_prediction.sh`. you will see logs in 1st window
+4. stop the container by typing `ctrl-c` in 1st window
+5. upload to docker hub by running `upload_docker.sh`. (will need to provide new tag)
+6. have minikube installed locally and run `minukube start`. (see that it is running by running `kubectl config view`)
+7. run command `run_kubernetes.sh` to start pod
+8. run command `make_prediction.sh` to hit pod (will see logs in 1st terminal)
+9. stop the pods by typing  `ctrl-c`, `minikube stop`, and `minikube delete`.
+
+### Files in Repo
+
+`app.py`= - main file of python application
+
+`Dockerfile` - file used to build container image
+
+`make_prediction.sh` - script to test api
+
+`Makefile` - make file used to install dependencies and run lint
+
+`requirements.txt` python dependencies
+
+`run_docker.sh` script to build and run docker locally
+
+`run_kubernetes.sh` Script to run uploaded image in k8s pod
+
+`upload_docker.sh` script to upload to docker hub
