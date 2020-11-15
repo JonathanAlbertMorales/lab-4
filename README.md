@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![JonathanAlbertMorales](https://circleci.com/gh/JonathanAlbertoMorales/lab-4.svg?style=svg)](https://app.circleci.com/pipelines/github/JonathanAlbertMorales/lab-4)
 
 ## Project Overview
 
