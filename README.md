@@ -59,7 +59,7 @@ ML-API that runs in k8s pod use to make predictions on Dataframe
 
 ### Files in Repo
 
-`app.py`= - main file of python application
+`app.py` - main file of python application
 
 `Dockerfile` - file used to build container image
 
